@@ -17,10 +17,17 @@ money_entry.grid(row=2,column=0)
 def money_submit():
     money_item = money_entry.get()
     money_listbox.insert(tk.END,money_item)
+    money_entry.delete(0,tk.END)
 
-money_button = tk.Button(window, text="Add", bd=3, height=5, width=10, justify="center", command=money_submit)
-money_button.grid(row=3, column=0)
+def remove_money_item():
+    m_selected = money_listbox.curselection()
+    for m_selected in m_selected[::-1]:
+        money_listbox.delete(m_selected)
 
+money_button_add = tk.Button(window, text="Add", bd=3, height=5, width=10, justify="center", command=money_submit)
+money_button_add.grid(row=3, column=0)
+money_button_remove = tk.Button(window, text="Remove", bd=3, height=5, width=10, justify="center", command=remove_money_item)
+money_button_remove.grid(row=4, column=0)
 
 # passion
 passion_lbl_title = tk.Label(window, text="Passion Bucket")
@@ -34,9 +41,17 @@ passion_entry.grid(row=2,column=1)
 def passion_submit():
     passion_item = passion_entry.get()
     passion_listbox.insert(tk.END,passion_item)
+    passion_entry.delete(0,tk.END)
+
+def remove_passion_item():
+    m_selected = passion_listbox.curselection()
+    for m_selected in m_selected[::-1]:
+        passion_listbox.delete(m_selected)
 
 passion_button = tk.Button(window, text="Add", bd=3, height=5, width=10, justify="center", command=passion_submit)
 passion_button.grid(row=3, column=1)
+passion_button_remove = tk.Button(window, text="Remove", bd=3, height=5, width=10, justify="center", command=remove_passion_item)
+passion_button_remove.grid(row=4, column=1)
 
 # learning
 learning_lbl_title = tk.Label(window, text="Learning Bucket")
@@ -50,8 +65,16 @@ learning_entry.grid(row=2,column=2)
 def learning_submit():
     learning_item = learning_entry.get()
     learning_listbox.insert(tk.END,learning_item)
+    learning_entry.delete(0,tk.END)
+
+def remove_learning_item():
+    m_selected = learning_listbox.curselection()
+    for m_selected in m_selected[::-1]:
+        learning_listbox.delete(m_selected)
 
 learning_button = tk.Button(window, text="Add", bd=3, height=5, width=10, justify="center", command=learning_submit)
 learning_button.grid(row=3, column=2)
+learning_button_remove = tk.Button(window, text="Remove", bd=3, height=5, width=10, justify="center", command=remove_learning_item)
+learning_button_remove.grid(row=4, column=2)
 
 window.mainloop()
