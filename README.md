@@ -1,7 +1,7 @@
 # Multi Bucket Manager
 
 A personal productivity tool inspired by Emilie Wapnick's TED Talk concept 
-of organizing goals and interests into buckets based on their role in your life.
+of organizing goals and interests into buckets.
 
 ## Concept
 
@@ -15,12 +15,14 @@ them into three clear buckets:
 ## Current Features
 
 - Visual display of three buckets
-- Static items per bucket
+- Add items to each bucket via text input
+- Items displayed in a list per bucket
 
 ## Planned Features
 
-- Add and remove items from each bucket
+- Remove items from each bucket
 - Move items between buckets
+- Save and load data between sessions
 - Improved UI and design
 
 ## Built With
