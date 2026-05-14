@@ -17,12 +17,11 @@ them into three clear buckets:
 - Visual display of three buckets
 - Add items to each bucket via text input
 - Items displayed in a list per bucket
+- Save and load items between sessions using CSV
 
 ## Planned Features
 
-- Remove items from each bucket
 - Move items between buckets
-- Save and load data between sessions
 - Improved UI and design
 
 ## Built With
